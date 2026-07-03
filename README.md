@@ -29,6 +29,11 @@ Set **Runtime → Change runtime type → GPU** first (notebooks 03/04 want it).
 Cadence submissions still work — it installs from `requirements-colab.txt` and the
 join code is unchanged.
 
+**Notebook 06** additionally needs the real JetNet dataset, so it installs
+`jetnet` in its own cell — that pins `numpy<2` and triggers a **one-time kernel
+restart** (the cell prompts you; just *Run all* again afterwards). Notebooks
+01/02/05 fall back to **synthetic** jets on Colab (they use real jets on Binder).
+
 ```
 notebooks/    01_vae … 06_project        — the teacher notebooks
 src/          shared helpers (jet-mass plot, loaders, GNN blocks, diffusion, train loop)
