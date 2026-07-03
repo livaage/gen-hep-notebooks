@@ -10,6 +10,25 @@ notebooks — the source of truth. The cadence converter turns them into the
 registered + student versions automatically (see "How cadence reads these"
 below).
 
+## Launch in Colab (BinderHub fallback)
+
+If BinderHub is unavailable, open any exercise notebook straight in **Google
+Colab** — the first cell auto-installs the environment (`requirements-colab.txt`)
+and pulls in `src/` + the data caches, so you can just **Run all**.
+
+| Notebook | |
+|---|---|
+| 01 · VAE | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/livaage/gen-hep-notebooks/blob/deploy/notebooks/01_vae.ipynb) |
+| 02 · GAN | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/livaage/gen-hep-notebooks/blob/deploy/notebooks/02_gan.ipynb) |
+| 03 · Diffusion (intro) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/livaage/gen-hep-notebooks/blob/deploy/notebooks/03_diffusion_intro.ipynb) |
+| 04 · Diffusion (calorimeter) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/livaage/gen-hep-notebooks/blob/deploy/notebooks/04_diffusion_calo.ipynb) |
+| 05 · Evaluation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/livaage/gen-hep-notebooks/blob/deploy/notebooks/05_evaluation.ipynb) |
+| 06 · Project | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/livaage/gen-hep-notebooks/blob/deploy/notebooks/06_project.ipynb) |
+
+Set **Runtime → Change runtime type → GPU** first (notebooks 03/04 want it).
+Cadence submissions still work — it installs from `requirements-colab.txt` and the
+join code is unchanged.
+
 ```
 notebooks/    01_vae … 06_project        — the teacher notebooks
 src/          shared helpers (jet-mass plot, loaders, GNN blocks, diffusion, train loop)
@@ -29,7 +48,7 @@ requirements.lock.txt  — pip freeze from the GPU box (generate there; goes to 
 | `03_diffusion_intro.ipynb` | DDPM | 2D toy from scratch; creature sprites emerge from noise (diffusers) | (mechanism focus) |
 | `04_diffusion_calo.ipynb` | second modality | — | calorimeter showers, energy-conditioned diffusion |
 | `05_evaluation.ipynb` | scoring generators | — | W1 / FPD / KPD + a GNN classifier two-sample test |
-| `06_project.ipynb` | in-session mini capstone | — | generate gluon jets, any architecture, jet-mass-W1 leaderboard |
+| `06_project.ipynb` | in-session mini capstone | — | generate gluon jets, any architecture, scored on jet-mass W1 |
 
 The **jet-mass plot** (`src/jetmass.py`) is the recurring physics spine across
 01/02/05/06 — the same axes let students compare a VAE, a GAN and diffusion.
