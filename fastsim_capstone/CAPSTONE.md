@@ -135,8 +135,8 @@ collaborative.
 
 ## 7. What we build (infrastructure to-do)
 
-- [x] `capstone/CAPSTONE.md` — this doc. ✅
-- [x] `capstone/capstone_calo.ipynb` — the **baseline starter** (built from
+- [x] `fastsim_capstone/CAPSTONE.md` — this doc. ✅
+- [x] `fastsim_capstone/capstone_calo.ipynb` — the **baseline starter** (built from
       `tools/build_capstone.py`): real Dataset 2 load, a small **energy-conditioned
       diffusion baseline** (reusing `src.diffusion.make_unet(class_embed=True)`
       from 04, 45 layers as channels), the **scoring harness**, and the **cadence

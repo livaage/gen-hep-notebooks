@@ -19,7 +19,7 @@ word. Everything for this project lives in this one folder:
 | `JUMPING_OFF_POINTS.md` | the concrete **deliverables, milestones, and figures/tables** to produce |
 | `README.md` | credit to the CaloDiffusion authors + setup notes |
 | `data/` | the three shower caches (electron, photon, pion) |
-| `vendor/` | the paper's code — you won't need to touch it |
+| `paper_code/` | the CaloDiffusion paper's code — you won't need to touch it |
 
 The API, mapped to the concepts in this primer:
 
