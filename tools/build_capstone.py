@@ -1,6 +1,6 @@
-"""Build capstone/capstone_calo.ipynb — the full-day fast-sim capstone starter.
+"""Build fastsim_capstone/capstone_calo.ipynb — the full-day fast-sim capstone starter.
 
-Project 2 of the generative track (see capstone/CAPSTONE.md). Students spend the
+Project 2 of the generative track (see fastsim_capstone/CAPSTONE.md). Students spend the
 day building the best **energy-conditioned calorimeter fast simulator** they can,
 on the second data modality (calo showers): **CaloChallenge Dataset 2** —
 GEANT4 electron showers, 1 GeV–1 TeV, each a 45x9x16 = 6480-voxel grid
@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from nbbuild import build, md, code, setup, exercise
 
 HERE = Path(__file__).resolve().parents[1]
-OUT = HERE / "capstone" / "capstone_calo.ipynb"
+OUT = HERE / "fastsim_capstone" / "capstone_calo.ipynb"
 
 cells = [
     md("""

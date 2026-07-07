@@ -14,7 +14,7 @@ The model, architecture, and pretrained checkpoints are from:
 > [arXiv:2308.03876](https://arxiv.org/abs/2308.03876).
 > Code: https://github.com/OzAmram/CaloDiffusionPaper (+ its `CaloChallenge` helper).
 
-Their code is vendored under [`vendor/`](vendor/), essentially unmodified — the only change is
+Their code is copied under [`paper_code/`](paper_code/), essentially unmodified — the only change is
 6 `einops.rearrange` calls in `models.py` rewritten with plain `torch` (marked with comments)
 so the project needs **no extra dependencies** beyond the course env. The data are skims of the
 public [CaloChallenge 2022](https://calochallenge.github.io/homepage/) datasets (Zenodo
@@ -27,7 +27,7 @@ calodiff_probe.py            our friendly wrapper — the only thing students im
 capstone_calodiffusion.ipynb scaffolded starter notebook (warm-up + Track B worked)
 JUMPING_OFF_POINTS.md        the 5 project tracks (A score field … E EM-vs-hadronic)
 data/                        committed shower caches (electron, photon, pion; 12k each)
-vendor/                      the paper's code, unmodified
+paper_code/                  the CaloDiffusion paper's code (copied in; essentially unmodified)
   scripts/                     CaloDiffu, models, utils, consts (+ plot)
   configs/                     per-dataset config JSONs
   trained_models/              dataset2 / dataset1_photon / dataset1_pion checkpoints

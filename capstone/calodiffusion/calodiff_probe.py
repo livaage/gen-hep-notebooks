@@ -25,7 +25,7 @@ Conventions (match the math in the notebooks):
 import os, sys, types
 
 _ROOT   = os.path.dirname(os.path.abspath(__file__))           # capstone/calodiffusion
-_VENDOR = os.path.join(_ROOT, "vendor")                        # the paper's code (unmodified)
+_VENDOR = os.path.join(_ROOT, "paper_code")                    # the CaloDiffusion paper's code
 _pylibs = os.path.join(_ROOT, "pylibs")                        # optional local deps (dev only)
 if os.path.isdir(_pylibs):
     sys.path.insert(0, _pylibs)
